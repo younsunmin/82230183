@@ -16,14 +16,14 @@ spec:
             readOnly: false
             subPath: cloud-sample
           - mountPath: /config
-            name: application-properties
+            name: "82230183-properties"
             readOnly: true
                           
       volumes:
       - name: "82230183-volume"
         persistentVolumeClaim:
           claimName: ce-aa-pvc
-      - name: application-properties
+      - name: "82230183-properties"
         configMap:
           name: "82230183-configmap"
           items:
